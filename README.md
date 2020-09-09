@@ -1,3 +1,1 @@
-# Amazing Adventures Server Template
----
-Please read through the code.
+# Amazing Adventures Template
