@@ -1,7 +1,6 @@
 package student.server;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.SortedMap;
 
 /**
  * An abstract store for any type of adventure game.
@@ -13,21 +12,35 @@ public interface AdventureService {
     void reset();
 
     /**
-     * Creates a new Adventure game.
+     * Creates a new Adventure game and stores it.
      * @return the id of the game.
-     *
-     * TODO: Make Exception thrown more specific.
      */
-    int newGame();
+    int newGame() throws AdventureException;
 
-    // destroyGame(int id)
+    /**
+     * Returns the state of the game instance associated with the given ID.
+     * @param id the instance id
+     * @return the current state of the game
+     */
+    GameStatus getGame(int id);
 
-    // TODO: Handle client commands here.
-    // For your convenience, here is a checklist of minimal commands your API must handle:
-    // [ ] go
-    // [ ] take
-    // [ ] drop
-    // [ ] <your custom command>
-    // ... and any other commands you created
-    CommandResult executeCommand(Command command);
+    /**
+     * Removes & destroys a game instance with the given ID.
+     * @param id the instance id
+     * @return false if the instance could not be found and/or was not deleted
+     */
+    boolean destroyGame(int id);
+
+    /**
+     * Executes a command on the game instance with the given id, changing the game state if applicable.
+     * @param id the instance id
+     * @param command the issued command
+     */
+    void executeCommand(int id, Command command);
+
+    /**
+     * Returns a sorted leaderboard of player "high" scores.
+     * @return a sorted map of player names to scores
+     */
+    SortedMap<String, Integer> fetchLeaderboard();
 }
