@@ -9,7 +9,7 @@ public class AdventureResource {
     /**
      * The single static adventure service instance used for this API.
      */
-    private static AdventureService service = new ImplAdventureService();
+    private static AdventureService service; // = new YourAdventureServiceHere();
 
     /**
      * The API endpoint to test connectivity.
@@ -19,7 +19,18 @@ public class AdventureResource {
     @Path("ping")
     public String ping() {
         // TODO: This method should return `pong`.
-        return "pong";
+        return "";
+    }
+
+    /**
+     * The API endpoint to clear all instances of the adventure game.
+     * @return a success response
+     */
+    @POST
+    @Path("reset")
+    public Response reset() {
+        service.reset();
+        return Response.ok().build();
     }
 
     /**
