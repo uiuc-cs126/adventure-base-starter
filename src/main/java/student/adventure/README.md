@@ -1,4 +1,4 @@
-This is where code relating to your main adventure game should go.
+This is where code related to your main adventure game should go.
 
 If you are on Week 1 of the assignment, this is the right place to put your code!
 
