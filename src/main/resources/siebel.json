@@ -5,7 +5,6 @@
     {
       "name": "MatthewsStreet",
       "description": "You are on Matthews, outside the Siebel Center",
-      "items": ["coin"],
       "directions": [
         {
           "directionName": "East",
@@ -16,7 +15,6 @@
     {
       "name": "SiebelEntry",
       "description": "You are in the west entry of Siebel Center. You can see the elevator, the ACM office, and hallways to the north and east.",
-	  "items": ["sweatshirt", "key"],
       "directions": [
         {
           "directionName": "West",
@@ -39,7 +37,6 @@
     {
       "name": "AcmOffice",
       "description": "You are in the ACM office.  There are lots of friendly ACM people.",
-      "items": ["pizza", "swag"],
       "directions": [
         {
           "directionName": "South",
@@ -64,7 +61,6 @@
     {
       "name": "Siebel1112",
       "description": "You are in Siebel 1112.  There is space for two code reviews in this room.",
-      "items": ["USB-C connector", "grading rubric"],
       "directions": [
         {
           "directionName": "West",
@@ -75,7 +71,6 @@
     {
       "name": "SiebelEastHallway",
       "description": "You are in the east hallway.  You can see Einstein Bros' Bagels and a stairway.",
-      "items": ["bagel", "coffee"],
       "directions": [
         {
           "directionName": "West",
@@ -104,7 +99,6 @@
     {
       "name": "SiebelBasement",
       "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
-      "items": ["pencil"],
       "directions": [
         {
           "directionName": "Up",
